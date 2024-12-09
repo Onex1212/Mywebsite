@@ -1,0 +1,110 @@
+/* Загальний стиль для всіх сторінок */
+body {
+    font-family: 'Times New Roman', serif; /* Шрифт Times New Roman */
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8; /* Світло-сірий фон */
+    color: #333; /* Темно-сірий колір тексту для кращої читабельності */
+}
+
+/* Заголовки */
+h1, h2 {
+    text-align: center;
+    color: #4b9cd3; /* Світло-синій колір заголовків */
+    font-size: 36px;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+/* Меню навігації */
+.navbar {
+    background-color: #2d3b45; /* Темно-сірий фон для навігації */
+    padding: 10px;
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    color: #fff; /* Білий колір тексту */
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+    color: #ff6347; /* Оранжевий колір при наведенні */
+}
+
+/* Основний контейнер */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 30px;
+    justify-content: center;
+}
+
+/* Секція з посиланнями */
+.prac-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.links {
+    list-style: none;
+    padding: 0;
+}
+
+.links li {
+    margin: 10px 0;
+}
+
+.links a {
+    color: #0077cc; /* Блакитний колір посилань */
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+    color: #ff6347; /* Оранжевий колір при наведенні */
+}
+
+/* Футер */
+.footer {
+    background-color: #2d3b45;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer h4 {
+    margin: 10px 0;
+}
+
+.link {
+    list-style: none;
+    padding: 0;
+}
+
+.link a {
+    color: #ff6347;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.link a:hover {
+    text-decoration: underline;
+}
