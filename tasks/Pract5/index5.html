@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Planner</title>
+    <style>
+        /* Основні стилі для сторінки */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .planner {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: auto auto;
+            gap: 10px;
+        }
+
+        .section {
+            border: 1px solid #ccc;
+            padding: 10px;
+            background: #fff;
+            border-radius: 5px;
+        }
+
+        .section h2 {
+            font-size: 18px;
+            margin: 0 0 10px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        /* Списки з чекбоксами */
+        .checklist {
+            display: grid;
+            gap: 10px;
+        }
+
+        .checklist input[type="text"] {
+            width: calc(100% - 25px);
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .checklist label {
+            display: flex;
+            align-items: center;
+        }
+
+        .checklist input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        /* Розклад днів тижня */
+        .days {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .day {
+            border: 1px solid #ccc;
+            padding: 10px;
+            background: #fff;
+            border-radius: 5px;
+        }
+
+        .day h3 {
+            margin: 0 0 10px;
+            font-size: 16px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        .day textarea {
+            width: 100%;
+            height: 100px;
+            resize: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 5px;
+        }
+
+        /* Адаптація під мобільні пристрої */
+        @media (max-width: 768px) {
+            .planner {
+                grid-template-columns: 1fr;
+            }
+
+            .days {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Weekly Planner</h1>
+    <div class="planner">
+        <!-- Ліва колонка -->
+        <div class="section">
+            <h2>Top 3 Goals</h2>
+            <div class="checklist">
+                <label><input type="checkbox"> <input type="text" placeholder="Goal 1"></label>
+                <label><input type="checkbox"> <input type="text" placeholder="Goal 2"></label>
+                <label><input type="checkbox"> <input type="text" placeholder="Goal 3"></label>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Everything Else</h2>
+            <div class="checklist">
+                <label><input type="checkbox"> <input type="text" placeholder="Task 1"></label>
+                <label><input type="checkbox"> <input type="text" placeholder="Task 2"></label>
+                <label><input type="checkbox"> <input type="text" placeholder="Task 3"></label>
+                <label><input type="checkbox"> <input type="text" placeholder="Task 4"></label>
+            </div>
+        </div>
+
+        <!-- Права колонка -->
+        <div class="section">
+            <h2>Weekly Overview</h2>
+            <div class="days">
+                <div class="day">
+                    <h3>Monday</h3>
+                    <textarea placeholder="Write your tasks..."></textarea>
+                </div>
+                <div class="day">
+                    <h3>Tuesday</h3>
+                    <textarea placeholder="Write your tasks..."></textarea>
+                </div>
+                <div class="day">
+                    <h3>Wednesday</h3>
+                    <textarea placeholder="Write your tasks..."></textarea>
+                </div>
+                <div class="day">
+                    <h3>Thursday</h3>
+                    <textarea placeholder="Write your tasks..."></textarea>
+                </div>
+                <div class="day">
+                    <h3>Friday</h3>
+                    <textarea placeholder="Write your tasks..."></textarea>
+                </div>
+                <div class="day">
+                    <h3>Saturday</h3>
+                    <textarea placeholder="Write your tasks..."></textarea>
+                </div>
+                <div class="day">
+                    <h3>Sunday</h3>
+                    <textarea placeholder="Write your tasks..."></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

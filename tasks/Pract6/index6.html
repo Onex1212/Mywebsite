@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charizard Animation</title>
+    <style>
+        /* Основні стилі для сторінки */
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: linear-gradient(to bottom, #87CEEB, #1E90FF); /* Градієнт неба */
+            height: 100vh;
+            display: flex;
+            justify-content: center; /* Центрування по горизонталі */
+            align-items: center; /* Центрування по вертикалі */
+        }
+
+        /* Стилі для Чарізарда */
+        .charizard {
+            width: 120px; /* Менший розмір */
+            height: 120px;
+            background: url('https://img.pokemondb.net/sprites/black-white/anim/normal/charizard.gif') no-repeat;
+            background-size: contain;
+            animation: flyCharizard 5s ease-in-out infinite;
+        }
+
+        /* Анімація Чарізарда */
+        @keyframes flyCharizard {
+            0% {
+                transform: translate(10%, 20%) scale(1);
+            }
+            25% {
+                transform: translate(30%, 10%) scale(1.1);
+            }
+            50% {
+                transform: translate(50%, 20%) scale(1);
+            }
+            75% {
+                transform: translate(70%, 10%) scale(1.1);
+            }
+            100% {
+                transform: translate(90%, 20%) scale(1);
+            }
+        }
+
+        /* Додаткові ефекти (полум'я, якщо потрібно) */
+        .flame {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle, #FF4500, transparent);
+            border-radius: 50%;
+            animation: flameEffect 0.5s linear infinite;
+        }
+
+        /* Анімація полум'я */
+        @keyframes flameEffect {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.5);
+                opacity: 0.6;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Чарізард -->
+    <div class="charizard">
+        <!-- Полум'я під ним (якщо потрібно) -->
+        <div class="flame"></div>
+    </div>
+</body>
+</html>
